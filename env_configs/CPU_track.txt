@@ -1,0 +1,2 @@
+free -h : to show memory size
+htop : dynamic track

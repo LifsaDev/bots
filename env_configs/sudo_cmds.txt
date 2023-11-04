@@ -1,0 +1,6 @@
+sudo apt-get install htop
+sudo update & upgrade
+sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+
+
+# create conda env with python 3.10.0
