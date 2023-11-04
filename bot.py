@@ -203,18 +203,17 @@ def main(device_type, show_sources, use_history, model_type, save_qa):
         os.mkdir(MODELS_PATH)
 
     qa = retrieval_qa_pipline(device_type, use_history, promptTemplate_type=model_type)
-    while True:
-        query = input("\nEnter a query: ")
-        if query == "exit":
-            break
-        with suppress_stdout_stderr():
-            res = qa(query)
-        answer, docs = res["result"], res["source_documents"]
 
-        print("\n\n> Question:")
-        print(query)
-        print("\n> Answer:")
-        print(answer)
+    query = input("\nEnter a query: ")
+    
+    with suppress_stdout_stderr():
+        res = qa(query)
+    answer, docs = res["result"], res["source_documents"]
+
+    print("\n\n> Question:")
+    print(query)
+    print("\n> Answer:")
+    print(answer)
 
         
 
